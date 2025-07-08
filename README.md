@@ -20,9 +20,12 @@ docker run -v ${PWD}/mlruns:/mlruns -v ${PWD}/data:/app/data xgb-creditcard
 
 i ovenstående kode starter "docker run" en container baseret på det image jeg lige byggede med det foregående kode. 
 -v ${PWD}/mlruns:/mlruns
+
 binder mappen mlruns fra min nuværende mappe til stien /mlruns i containeren. det gør det muligt at gemme mlflow-logs uden for containeren, så de kke går tabt, når containeren stoppes.
 
--v ${PWD}/data:/app/data: Binder min lokale data-mappe til /app/data i containeren, så koden i containeren kan læse CSV-filen fra data-mappen.
+-v ${PWD}/data:/app/data: 
+
+Binder min lokale data-mappe til /app/data i containeren, så koden i containeren kan læse CSV-filen fra data-mappen.
 
 XGB-creditcard er så det image jeg byggede i foregående kode, som vi gerne vil køre
 
