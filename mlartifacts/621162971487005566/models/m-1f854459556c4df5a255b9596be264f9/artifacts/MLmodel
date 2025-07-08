@@ -1,0 +1,22 @@
+artifact_path: mlflow-artifacts:/621162971487005566/models/m-1f854459556c4df5a255b9596be264f9/artifacts
+flavors:
+  python_function:
+    data: model.xgb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.10.13
+  xgboost:
+    code: null
+    data: model.xgb
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: xgb
+    xgb_version: 3.0.1
+mlflow_version: 3.1.1
+model_id: m-1f854459556c4df5a255b9596be264f9
+model_size_bytes: 229124
+model_uuid: m-1f854459556c4df5a255b9596be264f9
+prompts: null
+run_id: 4568efe67f5642bb9292d57a5257461e
+utc_time_created: '2025-07-04 13:00:55.842798'
