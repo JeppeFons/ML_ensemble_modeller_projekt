@@ -1,4 +1,8 @@
-docker-compose up --build
+docker build -t xgb-creditcard .
+docker run -v ${PWD}/mlruns:/mlruns -v ${PWD}/data:/app/data xgb-creditcard
+
+mlflow ui
+
 
 conda update -n base -c defaults conda
 
