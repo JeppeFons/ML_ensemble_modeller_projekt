@@ -10,7 +10,7 @@ Derfor vil ML-modelarkitekturen ikke være særlig kompleks i starten, da jeg fo
 
 Tjek blandt andet requirements.txt
 
-###Instruktioner til hvordan man kører koden eller notebooks###
+### Instruktioner til hvordan man kører koden eller notebooks
 
 **docker build -t xgb-creditcard .**
 
