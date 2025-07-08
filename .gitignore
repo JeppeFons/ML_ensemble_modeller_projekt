@@ -1,3 +1,5 @@
+environment.yml
+
 # Python cache og bytecode
 __pycache__/
 *.py[cod]
