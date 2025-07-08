@@ -1,5 +1,9 @@
 **Projektbeskrivelse og formål**
-Formålet med projektet er at anvende computer vision-teknikker til automatisk klassificering af medicinske billeder af lymfeknuder, således at modellen kan skelne mellem godartede og ondartede celler. Hensigten med dette er at prøve og udvikle et beslutningsstøtteværktøj til diagnosticering af lymfeknudekræft.
+Den primære motivation bag dette projekt var at få praktisk erfaring med MLFlow for at opnå en bedre forståelse af MLOps og praktisk erfaring med MLFlow API’et generelt.
+
+Min motivation var også at få praktisk erfaring med Docker og containerisering, da dette er en eftertragtet kompetence hos arbejdsgivere.
+
+Derfor vil ML-modelarkitekturen ikke være særlig kompleks i starten, da jeg fokuserer på simple anvendelser af MLFlow og Docker. Men med tiden vil jeg udvikle arkitekturen til at blive mere kompleks.
 
 **Installation og opsætning (fx miljø, dependencies)**
 Tjek blandt andet requirements.txt
