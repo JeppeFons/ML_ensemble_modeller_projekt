@@ -13,12 +13,17 @@ Tjek blandt andet requirements.txt
 
 docker build -t xgb-creditcard .
 
+forklaring af ovenstående kode:
 for at lave en container igennem docker, så kører vi først ovenstående kode, som bygger et Docker-image baseret på den dockerfile jeg har mit projekt repo. jeg giver det image jeg bygger tagget "xgb-creditcard", så jeg senere kan referere til det:
  
 
 docker run -v ${PWD}/mlruns:/mlruns -v ${PWD}/data:/app/data xgb-creditcard
 
-i ovenstående kode starter "docker run" en container baseret på det image jeg lige byggede med det foregående kode. 
+
+forklaring af ovenstående kode:
+
+docker run starter en container baseret på det image jeg lige byggede med det foregående kode.
+
 -v ${PWD}/mlruns:/mlruns
 
 binder mappen mlruns fra min nuværende mappe til stien /mlruns i containeren. det gør det muligt at gemme mlflow-logs uden for containeren, så de kke går tabt, når containeren stoppes.
