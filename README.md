@@ -1,4 +1,4 @@
-###Projektbeskrivelse og formål###
+### Projektbeskrivelse og formål
 
 Den primære motivation bag dette projekt var at få praktisk erfaring med MLFlow for at opnå en bedre forståelse af MLOps og praktisk erfaring med MLFlow API’et generelt.
 
@@ -6,7 +6,7 @@ Min motivation var også at få praktisk erfaring med Docker og containerisering
 
 Derfor vil ML-modelarkitekturen ikke være særlig kompleks i starten, da jeg fokuserer på simple anvendelser af MLFlow og Docker. Men med tiden vil jeg udvikle arkitekturen til at blive mere kompleks.
 
-###Installation og opsætning (fx miljø, dependencies)###
+### Installation og opsætning (fx miljø, dependencies)
 
 Tjek blandt andet requirements.txt
 
@@ -36,11 +36,11 @@ Binder min lokale data-mappe til /app/data i containeren, så koden i containere
 XGB-creditcard er så det image jeg byggede i foregående kode, som vi gerne vil køre
 
 mlflow ui
-###Forklaring af datasæt og kilde###
+### Forklaring af datasæt og kilde
 
 
 
-###Resultater og konklusioner###
+### Resultater og konklusioner
 
 
 # Dette er en H1 (største overskrift)
