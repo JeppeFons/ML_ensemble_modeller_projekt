@@ -4,9 +4,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import mlflow
 import mlflow.xgboost
+import os
 
 # Sæt MLflow op
-mlflow.set_tracking_uri("file:///mlruns")
+# mlflow.set_tracking_uri("file:///mlruns")
+mlflow.set_tracking_uri(os.environ.get("MLFLOW_TRACKING_URI", "file:///mlruns"))
 mlflow.set_experiment("xgboost_creditcard")
 
 # Indlæs data

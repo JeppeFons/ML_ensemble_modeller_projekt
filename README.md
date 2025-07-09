@@ -12,30 +12,39 @@ Tjek blandt andet requirements.txt
 
 ### Instruktioner til hvordan man kører koden eller notebooks
 
-**docker build -t xgb-creditcard .**
+**nedenstående skal køres i powershell, for at få containeren op at køre med ML-modellen**
+**bygger et image** 
 
-forklaring af ovenstående kode:
-for at lave en container igennem docker, så kører vi først ovenstående kode, som bygger et Docker-image baseret på den dockerfile jeg har mit projekt repo. jeg giver det image jeg bygger tagget "xgb-creditcard", så jeg senere kan referere til det:
- 
+docker build -t xgb-mlflow-image .
 
-**docker run -v ${PWD}/mlruns:/mlruns -v ${PWD}/data:/app/data xgb-creditcard**
+-t er et tag, alt efter hvad vi vil kalde imaget. punktummet betyder, at vi bygger imaget i den aktuelle mappe hvor dockerfilen er
 
+docker run --rm -it -v ${pwd}/data:/app/data xgb-mlflow-image
 
-forklaring af ovenstående kode:
+i ovenstående command loader du data fra data/raw_data/creditcard.csv, så for at containeren kan læse data, skal den mount'es i den lokale mappe ind i containeren, fx sådan
 
-docker run starter en container baseret på det image jeg lige byggede med det foregående kode.
+docker run --rm -it -v ${PWD}/data:/app/data -v ${PWD}/mlruns:/app/mlruns xgb-mlflow-image
 
--v ${PWD}/mlruns:/mlruns
+Hvis du vil bevare MLflow tracking logs udenfor containeren (eks. så du kan se resultaterne bagefter), kan du også mount'e mlruns mappen
 
-binder mappen mlruns fra min nuværende mappe til stien /mlruns i containeren. det gør det muligt at gemme mlflow-logs uden for containeren, så de kke går tabt, når containeren stoppes.
+forklaring:
+--rm fjerner containeren, når den stopper.
 
--v ${PWD}/data:/app/data: 
+-it gør at du får en interaktiv terminal (godt til debug, kan undlades).
 
-Binder min lokale data-mappe til /app/data i containeren, så koden i containeren kan læse CSV-filen fra data-mappen.
+xgb-mlflow-image er navnet på det image der laves.
 
-XGB-creditcard er så det image jeg byggede i foregående kode, som vi gerne vil køre
+**Hvis du kun vil genkøre træningen:**
 
-mlflow ui
+**tjek MLflow UI på:**
+
+først kør nedenstående i powershell:
+
+mlflow ui --backend-store-uri ./mlruns
+
+derefter tjek nedenstående lokal host:
+http://localhost:5000
+
 ### Forklaring af datasæt og kilde
 
 
