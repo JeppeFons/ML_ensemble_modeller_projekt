@@ -1,4 +1,4 @@
-### Projektbeskrivelse og formål
+### Projektbeskrivelse og formål.
 
 Den primære motivation bag dette projekt var at få praktisk erfaring med MLFlow for at opnå en bedre forståelse af MLOps og praktisk erfaring med MLFlow API’et generelt.
 
@@ -6,27 +6,27 @@ Min motivation var også at få praktisk erfaring med Docker og containerisering
 
 Derfor vil ML-modelarkitekturen ikke være særlig kompleks i starten, da jeg fokuserer på simple anvendelser af MLFlow og Docker. Men med tiden vil jeg udvikle arkitekturen til at blive mere kompleks.
 
-### Installation og opsætning (fx miljø, dependencies)
+### Installation og opsætning (fx miljø, dependencies).
 
-Tjek blandt andet requirements.txt
+Tjek blandt andet filen requirements.txt
 
-### Instruktioner til hvordan man kører koden eller notebooks
+### Instruktioner til hvordan man kører koden eller notebooks.
 
-**nedenstående skal køres i powershell, for at få containeren op at køre med ML-modellen**
+**nedenstående skal køres i powershell, for at få containeren op at køre med ML-modellen.**
 
-**bygger et image** 
+**bygger et image:** 
 
 docker build -t xgb-mlflow-image .
 
--t er et tag, alt efter hvad vi vil kalde imaget. punktummet betyder, at vi bygger imaget i den aktuelle mappe hvor dockerfilen er
+-t er et tag, alt efter hvad vi vil kalde imaget. punktummet betyder, at vi bygger imaget i den aktuelle mappe hvor dockerfilen er.
 
 docker run --rm -it -v ${pwd}/data:/app/data xgb-mlflow-image
 
-i ovenstående command loader du data fra data/raw_data/creditcard.csv, så for at containeren kan læse data, skal den mount'es i den lokale mappe ind i containeren, fx sådan
+i ovenstående command loader du data fra data/raw_data/creditcard.csv, så for at containeren kan læse data, skal den mount'es i den lokale mappe ind i containeren, fx sådan.
 
 docker run --rm -it -v ${PWD}/data:/app/data -v ${PWD}/mlruns:/app/mlruns xgb-mlflow-image
 
-Hvis du vil bevare MLflow tracking logs udenfor containeren (eks. så du kan se resultaterne bagefter), kan du også mount'e mlruns mappen
+Hvis du vil bevare MLflow tracking logs udenfor containeren (eks. så du kan se resultaterne bagefter), kan du også mount'e mlruns mappen.
 
 forklaring:
 
@@ -47,8 +47,8 @@ mlflow ui --backend-store-uri ./mlruns
 derefter tjek nedenstående lokal host:
 http://localhost:5000
 
-### Forklaring af datasæt og kilde
+### Forklaring af datasæt og kilde.
 
 
 
-### Resultater og konklusioner
+### Resultater og konklusioner.
