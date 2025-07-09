@@ -13,6 +13,7 @@ Tjek blandt andet requirements.txt
 ### Instruktioner til hvordan man kører koden eller notebooks
 
 **nedenstående skal køres i powershell, for at få containeren op at køre med ML-modellen**
+
 **bygger et image** 
 
 docker build -t xgb-mlflow-image .
@@ -28,6 +29,7 @@ docker run --rm -it -v ${PWD}/data:/app/data -v ${PWD}/mlruns:/app/mlruns xgb-ml
 Hvis du vil bevare MLflow tracking logs udenfor containeren (eks. så du kan se resultaterne bagefter), kan du også mount'e mlruns mappen
 
 forklaring:
+
 --rm fjerner containeren, når den stopper.
 
 -it gør at du får en interaktiv terminal (godt til debug, kan undlades).
